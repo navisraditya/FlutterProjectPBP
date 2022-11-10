@@ -220,10 +220,6 @@ class _MyFormPageState extends State<MyFormPage> {
                   secondary: const Icon(Icons.run_circle_outlined),
                 ),
                 TextButton(
-                  child: const Text(
-                    "Simpan",
-                    style: TextStyle(color: Colors.white),
-                  ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
                   ),
@@ -237,40 +233,40 @@ class _MyFormPageState extends State<MyFormPage> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             elevation: 15,
-                            child: Container(
-                              child: ListView(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                shrinkWrap: true,
-                                children: <Widget>[
-                                  Center(
-                                      child: Column(
-                                    children: [
-                                      Text('Ringkasan Data'),
-                                      Text('Nama: ' + _namaLengkap),
-                                      Text('Jenjang: ' + jenjang),
-                                      Text('Umur: ' + umur.toString()),
-                                      Text('Kelas: ' + kelasPBP),
-                                      Text('Practice Mode: ' +
-                                          _nilaiSwitch.toString())
-                                    ],
-                                  )),
-                                  SizedBox(height: 20),
-                                  // TODO: Munculkan informasi yang didapat dari form
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Kembali'),
-                                  ),
-                                ],
-                              ),
+                            child: ListView(
+                              padding:
+                                  const EdgeInsets.only(top: 20, bottom: 20),
+                              shrinkWrap: true,
+                              children: <Widget>[
+                                Center(
+                                    child: Column(
+                                  children: [
+                                    const Text('Ringkasan Data'),
+                                    Text('Nama: $_namaLengkap'),
+                                    Text('Jenjang: $jenjang'),
+                                    Text('Umur: $umur'),
+                                    Text('Kelas: $kelasPBP'),
+                                    Text('Practice Mode: $_nilaiSwitch')
+                                  ],
+                                )),
+                                const SizedBox(height: 20),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: const Text('Kembali'),
+                                ),
+                              ],
                             ),
                           );
                         },
                       );
                     }
                   },
+                  child: const Text(
+                    "Simpan",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),
