@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'navisraditya for PBP',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
-  final String title = 'Flutter Demo Home Page';
+  final String title = 'PBP Flutter Course';
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
